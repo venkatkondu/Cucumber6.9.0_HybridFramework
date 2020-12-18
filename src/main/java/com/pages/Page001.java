@@ -4,9 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Page001 {
 	WebDriver driver;
@@ -64,4 +61,19 @@ public void clickSubmitBtn()
 {
 driver.findElement(submit).click();	
 }
+
+
+// Bellow method is for right approach for the Page Object Model or lazy instantiation pattern 
+public HomePage doLogIn(String un, String pwd) // this method returns the Home page object How to do this  
+{
+	driver.findElement(email).sendKeys(un);
+	driver.findElement(password).sendKeys(pwd);
+	driver.findElement(submit).click();
+	
+	// After this how would I know 
+
+	return new HomePage(driver);
+}
+
+
 }
