@@ -6,7 +6,7 @@ import java.util.Map;
 import org.junit.Assert;
 
 import com.pages.HomePage;
-import com.pages.Page001;
+import com.pages.IndexPage;
 import com.qa.factory.DriverFactory;
 
 import io.cucumber.datatable.DataTable;
@@ -17,8 +17,11 @@ import io.cucumber.java.en.When;
 
 public class E_CommerceAppStep1 {
 	static String title;
-	private Page001 indexPage= new Page001(DriverFactory.getDriver()); // in this I have to create one 
+	private IndexPage indexPage= new IndexPage(DriverFactory.getDriver()); // in this I have to create one 
 	private HomePage homePage;
+	
+	
+	
 @Given("user pass the Url of the appliacation") // Here I want  to pass the Url of the application 
 public void user_pass_the_url_of_the_appliacation() {
 DriverFactory.getDriver().get("http://automationpractice.com/index.php");// Here  I have to pass the url of the application 
@@ -76,9 +79,10 @@ public void title_of_the_home_page_should_be(String homeTitle) {
 @Then("user get the Accounts details like below")
 public void user_get_the_accounts_details_like_below(DataTable dataTable) {
 // Here I will do some other things as per the requirements 
-	
-	homePage.getListOfTheCenter();
-	
+	System.out.println("Here I  am in get the account details like below");
+	System.out.println("-----------------------------------------------------------");
+	homePage.getListOfTheCenter(); // I am getting null pointer exception Why 
+	System.out.println("----------------------------------------");
 }
 
 @Then("account count should be {int}")

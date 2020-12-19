@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Page001 {
+public class IndexPage {
 	WebDriver driver;
 
 	// Object Repositories ;
@@ -17,7 +17,7 @@ public class Page001 {
 	By forgotPasswordLink=By.partialLinkText("Forgot your password?"); // etccc ... 
 	By signOut=By.partialLinkText("Sign out");
 	
-public Page001(WebDriver rDriver)
+public IndexPage(WebDriver rDriver)
 {
 	this.driver=rDriver;
 	

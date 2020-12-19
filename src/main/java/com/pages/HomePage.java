@@ -10,6 +10,8 @@ public class HomePage {
 	private WebDriver driver;
 	// OR // what ever I want to 
 	
+	By row=By.className("row");// will it work
+	By linksAccounts=By.className("row addresses-lists");
 	By addressList=By.className("row addresses-lists"); // check this will work or not 
 	By addressColumns=By.id("center_column"); // By this how will I get the list of the lists from this 
 	
@@ -40,7 +42,7 @@ public class HomePage {
 	{
 		
 		List<String> list=null;
-		List<WebElement> eles=driver.findElements(addressColumns); //check this will work or not 
+		List<WebElement> eles=driver.findElements(row); //check this will work or not 
 		for(WebElement ele:eles	)
 		{
 			String text=ele.getText();
