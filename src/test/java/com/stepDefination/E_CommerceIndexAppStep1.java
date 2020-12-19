@@ -2,6 +2,9 @@ package com.stepDefination;
 
 import org.junit.Assert;
 
+import com.pages.IndexPage;
+import com.qa.factory.DriverFactory;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,18 +13,20 @@ import io.cucumber.java.en.When;
 public class E_CommerceIndexAppStep1 {
 
 String title=null;
-
+IndexPage iPage=new IndexPage(DriverFactory.getDriver()); // How this will work 
 
 @Given("user pass the url of the application")
 public void user_pass_the_url_of_the_application() {
 // Here we will pass the url of the Application 
 	// How to do this 
+	DriverFactory.getDriver().get(""); // this value I want to get from the url of the application How to do this
 
 }
 
 @When("user get the title of the page")
 public void user_get_the_title_of_the_page() {
 // Here user get the title of the page 
+	this.title=DriverFactory.getDriver().getTitle(); // or any other function I will use
 	
 	
 }
