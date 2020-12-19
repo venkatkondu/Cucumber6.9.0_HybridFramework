@@ -15,6 +15,8 @@ public class HomePage {
 	By addressList=By.className("row addresses-lists"); // check this will work or not 
 	By addressColumns=By.id("center_column"); // By this how will I get the list of the lists from this 
 	
+	
+	By logout=By.partialLinkText("Sign out");
 	public HomePage(WebDriver rDriver)
 	{
 		this.driver=rDriver;
@@ -36,6 +38,12 @@ public class HomePage {
 	{	// To handle window things I used this 
 		
 		return driver.getWindowHandle();
+	}
+	
+	public void logOut()
+	{
+		driver.findElement(logout).click();
+		
 	}
 	
 	public void getListOfTheCenter()

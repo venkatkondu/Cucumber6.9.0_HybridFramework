@@ -1,6 +1,7 @@
 package com.appHooks;
 
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -36,9 +37,13 @@ public class ApplicationHooks001 {
 	public void initialazation() {
 		
 	factory=new DriverFactory();
-	driver=factory.init_Driver(prop.getProperty("browser"));
+	driver=factory.init_Driver(prop.getProperty("browser"));// her we have to pass the browser value from the properties file 
 	
 	driver.manage().window().maximize();	
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+	driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
+	
 		
 	} 
 	

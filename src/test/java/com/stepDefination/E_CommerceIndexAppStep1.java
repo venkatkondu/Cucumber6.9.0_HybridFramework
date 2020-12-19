@@ -1,6 +1,7 @@
 package com.stepDefination;
 
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 
@@ -26,7 +27,16 @@ public void user_pass_the_url_of_the_application() {
 // Here we will pass the url of the Application 
 	// How to do this      // How to get the values from properties file her 
 	DriverFactory.getDriver().get(properties.getProperty("url")); // this value I want to get from the url of the application How to do this
-
+	DriverFactory.getDriver().manage().window().maximize();	
+	DriverFactory.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	DriverFactory.getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+	DriverFactory.getDriver().manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
+	
+	/*
+		 * driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 * driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		 * driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
+		 */	
 }
 
 @When("user get the title of the page")
