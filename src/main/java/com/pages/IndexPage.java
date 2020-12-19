@@ -27,7 +27,7 @@ public IndexPage(WebDriver rDriver)
 }
 
 
-public String getLoginPageTitle()
+public String getIndexPageTitle()
 {
 return driver.getTitle();	
 
