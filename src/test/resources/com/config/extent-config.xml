@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<extentreportes>
+	<configuration>
+	<!--  Report theme dark, standard -->
+		<theme>dark</theme>
+	
+	<!--  document encoding default UTF-8 -->
+	
+		<encoding>UTF-8</encoding>
+		
+		
+		<!--  Protocol for script and style sheets -->
+		<!--  defaults   to https  -->
+	<protocol>http</protocol>
+	
+	
+	<!--  Title of the document is  -->
+	<documentTitle>ExtentReportfor_Cucumber</documentTitle>
+	
+	
+	<reportName>VenktTest_CucuberReporter</reportName>
+	
+	<!--  Location of the charts in the test  __ bottom , top -->
+	
+	<testViewChartLocation>bottom</testViewChartLocation>
+	
+	
+	
+	
+	<!-- Custom javaScript -->
+	<scripts>
+	
+	<![CDATA[
+	
+	$(document).ready(function(){    } );
+	
+	]]>
+	
+	</scripts>
+	<!--  Custom styles  -->
+
+	<styles>
+	
+	<![CDATA[
+	
+	]]>
+	
+	</styles>
+	
+	
+	</configuration>
+
+</extentreportes>
