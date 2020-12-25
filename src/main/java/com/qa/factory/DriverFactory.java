@@ -9,7 +9,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 
-	public static ThreadLocal<WebDriver> tlDriver=new ThreadLocal<WebDriver>();
+	public static ThreadLocal<WebDriver> tlDriver=new ThreadLocal<WebDriver>(); // how this will work 
 	
 	
 	public static WebDriver getDriver()
@@ -22,7 +22,7 @@ public class DriverFactory {
 	{
 		if(browser.equalsIgnoreCase("chrome"))
 		{
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().setup();// this will work for all types of versions of the chromoeversions
 			//tlDriver=new ChromeDriver();
 			tlDriver.set(new ChromeDriver());
 			
