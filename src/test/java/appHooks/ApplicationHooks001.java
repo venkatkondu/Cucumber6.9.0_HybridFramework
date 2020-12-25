@@ -1,4 +1,4 @@
-package com.appHooks;
+package appHooks;
 
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
