@@ -14,7 +14,7 @@ public class ConfigReader {
 	{
 		prop=new Properties();
 		
-		File file=new File("./src/test/resources/com/config/config.properties");
+		File file=new File("./src/test/resources/config/config.properties");
 		FileInputStream inStream;
 		try {
 			inStream = new FileInputStream(file);System.out.println("Properties file  loaded from the path");
@@ -23,6 +23,9 @@ public class ConfigReader {
 		} catch (FileNotFoundException e) {
 			System.out.println("File is not loaded  from the path check the path of the file :");
 			e.printStackTrace();
+			
+			//throw new Exception();
+			
 		} catch (IOException e) {
 			System.out.println("Properties file is not loaded from the inStream check ::");
 			e.printStackTrace();

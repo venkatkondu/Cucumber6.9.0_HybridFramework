@@ -33,10 +33,10 @@ return driver.getTitle();
 
 }
 
-public void clickOnSignLink()// later on I will update to if sign Link is displayed then only it will be click 
-{
-driver.findElement(signIn).click();	
-}
+	/*
+	 * public void clickOnSignLink()// later on I will update to if sign Link is
+	 * displayed then only it will be click { driver.findElement(signIn).click(); }
+	 */
 public void clickOnLogOutLink()
 {
 driver.findElement(signOut).click();	
@@ -45,6 +45,12 @@ public boolean isForgotPwdLinkExits()
 {
 return driver.findElement(forgotPasswordLink).isDisplayed();
 
+}
+
+public LoginPage clikOnSingInLink()
+{
+	driver.findElement(signIn).click();
+return new LoginPage(driver);
 }
 
 public void enterUserName(String userName)

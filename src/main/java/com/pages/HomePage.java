@@ -40,9 +40,11 @@ public class HomePage {
 		return driver.getWindowHandle();
 	}
 	
-	public void logOut()
+	public LoginPage logOut() // after login which page I am landing again I will check it 
 	{
 		driver.findElement(logout).click();
+		return new LoginPage(driver);
+	// It will return the again LogIn page things I will update again 
 		
 	}
 	
